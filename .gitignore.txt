@@ -1,0 +1,14 @@
+git init
+git branch -M main
+git remote add origin <URL> of repo
+echo .metadata/>>.gitignore
+echo .settings/>>.gitignore
+echo .classpath/>>.gitignore
+echo .project/>>.gitignore
+echo bin />>gitignore
+echo target/>>.gitignore
+echo *.log>>.gitignore
+git add .
+git commit -m "first commit"
+git push -u origin main
+
