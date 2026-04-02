@@ -1,4 +1,5 @@
-package com.mphasis.springjdbcapp.config;
+package com.mphasis.springwebapp.config;
+
 
 import javax.sql.DataSource;
 
@@ -16,12 +17,13 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableAspectJAutoProxy
 @EnableTransactionManagement
 @Configuration
-@ComponentScan(basePackages = {"com.mphasis.springjdbcapp"})
+@ComponentScan(basePackages = {"com.mphasis.springwebapp"})
 public class SpringConfig {
 	@Bean
 	@Scope("singleton")
 	public DriverManagerDataSource driverManagerDataSource() {
 		DriverManagerDataSource ds = new DriverManagerDataSource();
+		ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
 		ds.setUrl("jdbc:mysql://localhost:3306/springdb");
 		ds.setUsername("root");
 		ds.setPassword("root@39");
